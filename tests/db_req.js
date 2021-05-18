@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config();
 const { Client } = require('@notionhq/client');
 
 const notion = new Client({

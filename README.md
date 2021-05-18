@@ -1,4 +1,4 @@
-# Gatsby Source Notion
+# Gatsby Source Notion DB
 
 Plugin for connecting a Notion database to Gatby's GraphQL.
 
@@ -7,7 +7,7 @@ Plugin for connecting a Notion database to Gatby's GraphQL.
 
 ## Install
 
-`npm install gatsby-source-notion`
+`npm install gatsby-source-notion-db`
 
 ## How to use
 

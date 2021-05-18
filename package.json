@@ -1,10 +1,11 @@
 {
-	"name": "gatsby-source-notion",
+	"name": "gatsby-source-notion-db",
 	"description": "Gatsby Source plugin for Notion databases and pages.",
 	"version": "0.0.1",
 	"main": "index.js",
 	"license": "MIT",
 	"private": false,
+	"author": "dkvist <danielkvist@protonmail.com>",
 	"keywords": [
 		"notion",
 		"gatsby",
