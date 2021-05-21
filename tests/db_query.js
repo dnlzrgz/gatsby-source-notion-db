@@ -16,7 +16,6 @@ const notion = new Client({
 	results.forEach(async (result) => {
 		const pageId = result.id;
 		const response = await notion.pages.retrieve({ page_id: pageId });
-
 		console.log(response);
 	});
 })();

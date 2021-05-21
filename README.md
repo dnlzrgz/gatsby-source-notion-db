@@ -22,22 +22,23 @@ You need a Notion access token and a Notion's database ID in order to be able to
 ```javascript
 // In your gatsby-config.js
 module.exports {
-  plugins: [
-    {
-      resolve: "gatsby-source-notion-db",
-      options: {
-        token: process.env.NOTION_ACCESS_TOKEN,
-        databaseId: process.env.NOTION_DATABASE_ID,
-      },
-    },
-  ],
+	plugins: [
+		{
+			resolve: 'gatsby-source-notion-db',
+			options: {
+				token: process.env.NOTION_TOKEN,
+				databaseId: process.env.NOTION_DATABASE_ID,
+				max: 10, // Max possible is 100, default is also 100
+			},
+		},
+	],
 }
 ```
 
-## In Development
-
-This plugin is in development and it's not stable. So please, don't use it in production.
+> Currently the Notion API is in development. Some things may change or break so please, don't use in production yet!
 
 ## Current limitations
 
-For the moment `gatsby-source-notion-db` only fetches the first 100 elements in a database and doesn't retrieves each page content, only its properties.
+For the moment `gatsby-source-notion-db` only fetches a maximum of 100 elements in a database and doesn't retrieves page's content, only its properties.
+
+Some of these limititations are due to the current state of the API.
