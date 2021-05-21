@@ -1,5 +1,10 @@
 # Gatsby Source Notion DB
 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/danielkvist/gatsby-source-notion-db)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+![npm bundle size](https://img.shields.io/bundlephobia/min/gatsby-source-notion-db)
+![npm](https://img.shields.io/npm/dt/gatsby-source-notion-db)
+
 Plugin for connecting a Notion database to Gatby's GraphQL.
 
 - [Notion's API documentation](https://developers.notion.com/docs)
