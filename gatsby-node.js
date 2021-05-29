@@ -1,4 +1,7 @@
 const { Client } = require('@notionhq/client');
+const getPages = require('./src/getPages');
+const getPageProps = require('./src/getPageProps');
+const getPageBlocks = require('./src/getPageBlocks');
 
 async function sourceNodes(
 	{ actions: { createNode }, reporter, createNodeId, createContentDigest },
@@ -20,31 +23,23 @@ async function sourceNodes(
 		auth: token,
 	});
 
-	// Returns a 404 response if the database doesn't exist.
-	// Or a 400 or 429 response if the request exceeds the request
-	// limit.
-	const response = await notion.databases.query({
-		database_id: databaseId,
-		page_size: max,
-	});
-
-	const { results } = response;
+	const results = await getPages(notion, databaseId, max);
 
 	results.forEach(async (result) => {
 		const pageId = result.id;
-		const response = await notion.pages.retrieve({
-			page_id: pageId,
-		});
+		const pageProps = await getPageProps(notion, pageId);
+		const pageBlocks = await getPageBlocks(notion, pageId);
 
 		createNode({
 			children: [],
 			internal: {
 				type: 'NotionPage',
 				mediaType: 'application/json',
-				content: JSON.stringify(response),
-				contentDigest: createContentDigest(response),
+				content: JSON.stringify(pageProps),
+				contentDigest: createContentDigest(pageProps),
 			},
-			...response,
+			...pageProps,
+			_rawBlocks: [...pageBlocks],
 			parent: JSON.stringify(pageId),
 			id: createNodeId(pageId),
 		});
