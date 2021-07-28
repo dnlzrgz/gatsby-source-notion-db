@@ -1,24 +1,22 @@
 {
-	"name": "gatsby-source-notion-db",
-	"description": "Gatsby Source plugin for Notion databases using the official Notion SDK.",
-	"version": "0.4.0",
-	"main": "index.js",
-	"license": "MIT",
-	"private": false,
-	"author": "dkvist <daniel@dkvist.com>",
-	"keywords": [
-		"notion",
-		"notion sdk",
-		"gatsby",
-		"gatsby-plugin"
-	],
-	"devDependencies": {},
-	"dependencies": {
-		"@notionhq/client": "^0.1.3"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/danielkvist/gatsby-source-notion.git"
-	},
-	"homepage": "https://github.com/danielkvist/gatsby-source-notion#readme"
+  "name": "gatsby-source-notion-db",
+  "description": "Gatsby Source plugin for Notion databases using the official Notion SDK.",
+  "version": "0.4.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "author": "dkvist <daniel@dkvist.com>",
+  "keywords": [
+    "notion",
+    "notion sdk"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "@notionhq/client": "^0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielkvist/gatsby-source-notion.git"
+  },
+  "homepage": "https://github.com/danielkvist/gatsby-source-notion#readme"
 }
